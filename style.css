@@ -1,0 +1,703 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor0: #FEFCFD;
+    --cor1: #C9171D;
+    --cor2: #000000;
+
+
+    --cor6: #E7E7DB;
+    --cor7: #FBF8F6;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-titulos: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+
+}
+
+/* Cabeçalho do Site*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--cor0);
+    border-bottom: 2px solid var(--cor1);
+}
+
+header nav {
+     padding-right: 40px; 
+    display: flex;
+    gap: 35px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor1);
+}
+
+/* Corpo do Site*/
+
+main {
+    padding: 40px 20px;
+}
+
+strong {
+    color: var(--cor1);
+}
+
+/* PRIMEIRA SEÇÃO */
+
+.primeira-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.primeira-secao .titulo-primeira-secao h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--cor2);
+    line-height: 1.2;
+    font-family: 'Hanken Grotesk', sans-serif; 
+}
+
+.primeira-secao .imagem-primeira-secao img {
+    width: 400px; /* Ajuste conforme necessário */
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 8px;  */
+}
+
+/* SEGUNDA SEÇÃO */
+
+.segunda-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: none;
+    margin: 0 auto;
+    /* margin-top: 150px; */
+    padding: 70px 60px 70px 40px;
+    background: linear-gradient(to bottom right, #f8e8e8, #f2c5c5); 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.247);
+}
+
+.segunda-secao .video-segunda-secao {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.segunda-secao .video-segunda-secao iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+.segunda-secao .texto-segunda-secao{
+    flex: 1;
+}
+
+.segunda-secao .texto-segunda-secao h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.segunda-secao .texto-segunda-secao p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-align: justify;
+}
+
+.segunda-secao .texto-segunda-secao ul {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-align: justify;
+}
+
+/* TERCEIRA SEÇÃO */
+
+.terceira-secao {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.terceira-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Estilos para o container de emoções */
+.emocoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.emocao {
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-align: center;
+}
+
+.emocao img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.418);
+    transition: transform 0.2s;
+}
+
+.emocao img:hover {
+    transform: scale(1.1);
+}
+
+.emocao p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.emocao.alegria img:hover{
+    box-shadow: 0px 0px 10px rgb(255, 234, 0);
+}
+
+.emocao.tristeza img:hover{
+    box-shadow: 0px 0px 10px rgb(0, 51, 255);
+}
+
+.emocao.raiva img:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+
+.emocao.ansiedade img:hover{
+    box-shadow: 0px 0px 10px rgb(255, 170, 0);
+}
+
+.emocao.vergonha img:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 217);
+}
+
+.emocao.medo img:hover{
+    box-shadow: 0px 0px 10px rgb(136, 0, 255);
+}
+
+.emocao.alegria p:hover {
+    color: #FFD700; 
+}
+
+.emocao.tristeza p:hover {
+    color: #1E90FF; 
+}
+
+.emocao.raiva p:hover {
+    color: #FF4500; 
+}
+
+.emocao.ansiedade p:hover {
+    color: #FFA500; /* Laranja para Ansiedade */
+}
+
+.emocao.vergonha p:hover {
+    color: #FF69B4; /* Rosa para Vergonha */
+}
+
+.emocao.medo p:hover {
+    color: #8A2BE2; /* Roxo para Medo */
+}
+
+
+/* Estilos para o botão de expansão */
+.expand-button {
+    display: inline-block;
+    margin: 40px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: 2px solid var(--cor1);
+    background-color: transparent;
+    color: var(--cor2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expand-button:hover {
+    background-color: var(--cor6);
+}
+
+/* Oculta a seção extra por padrão */
+.extra {
+    display: none;
+}
+
+/* QUARTA SEÇÃO */
+
+/* Estilos da Quarta Seção */
+.quarta-secao {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.quarta-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    margin-bottom: 20px;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 80px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+}
+
+/* Estilos do Carrossel */
+/* Contêiner do Carrossel */
+.carrossel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Linha de livros */
+.livros {
+    display: flex;
+    animation: slide 60s linear infinite;
+}
+
+.livro {
+    flex: 0 0 200px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.livro img {
+    width: 150px;
+    height: 220px;
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.livro p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.carrossel:hover .livros {
+    animation-play-state: paused;
+}
+
+/* Animação de slide */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* QUINTA SEÇÃO - SABINCAST*/
+
+/* Estilos para a seção SabinCast */
+.quinta-secao {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.quinta-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+}
+
+/* Estilos para o container de episódios */
+.episodios-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+}
+
+/* Estilos para cada episódio */
+.episodio {
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.episodio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.episodio img:hover {
+    transform: scale(1.01);
+}
+
+/* Adicionando margem entre a imagem e o link de descrição */
+.episodio .descricao-link {
+    margin-top: 15px;
+}
+
+/* Estilos para o link de descrição */
+.descricao-link {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: var(--cor2);
+    background-color: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid var(--cor2);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao-link:hover {
+    background-color: var(--cor2);
+    color: #fff;
+}
+
+/* Estilos para o tocador de áudio */
+.audio-player {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.audio-player h3 {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cor2);
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px; /* Limita a largura do player */
+    outline: none;
+}
+
+
+
+/* SEXTA SEÇÃO */
+
+.sexta-secao {
+    text-align: center;
+    padding: 40px 0;
+    width: 98vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom right, #f8e8e8, #f2c5c5);
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.24), 0px 4px 8px rgba(0, 0, 0, 0.24);
+    margin-top: 60px;
+}
+
+.sexta-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    position: relative;
+    animation: slideshow 30s linear infinite; /* Aumentei o tempo para 30s para um movimento mais suave */
+    will-change: transform;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 220px;
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Calculando exatamente a distância que precisamos mover */
+        transform: translateX(calc(-50% - 7.5px));
+    }
+}
+
+/* Adicionando propriedades para suavizar a animação */
+.carousel-track {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 15px 0;
+    }
+    
+    .card {
+        width: 130px;
+        height: 190px;
+    }
+}
+
+
+/* SÉTIMA SEÇÃO - HABILIDADES */
+
+.setima-secao {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+.setima-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    margin-bottom: 40px;
+}
+
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.habilidade {
+    text-align: center;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    max-width: 200px; 
+}
+
+.habilidade img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.361);
+}
+
+.habilidade p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.habilidade img:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% */
+    transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+
+/* OITAVA SEÇÃO */
+
+.oitava-secao {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--cor7);
+    margin: 0 auto;
+    margin-top: 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
+}
+
+.oitava-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    margin-bottom: 20px;
+}
+
+/* Estilos para a lista de sugestões */
+.sugestoes-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sugestoes {
+    list-style: none;
+    padding: 0;
+    column-count: 3; /* Divide a lista em duas colunas */
+    column-gap: 60px; /* Espaço entre as colunas */
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sugestoes li {
+    font-size: 1rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sugestoes li:hover {
+    color: var(--cor1); /* Cor vermelha ao passar o mouse */
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--cor6); 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.247);
+}
+
+.footer-logos {
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+}
+
+.footer-logos img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    margin-right: 100px;
+}
+
+.footer-menu a {
+    color: var(--cor2);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.footer-menu a:hover {
+    color: #555; 
+}
