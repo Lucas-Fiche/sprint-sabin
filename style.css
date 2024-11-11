@@ -387,25 +387,24 @@ strong {
     color: var(--cor2);
 }
 
-/* Estilos para o container de episódios */
+/* Container para a seção de episódios */
 .episodios-container {
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: center; /* Centraliza todos os episódios horizontalmente */
+    gap: 90px; /* Espaço entre os episódios */
     margin-top: 50px;
 }
 
 /* Estilos para cada episódio */
 .episodio {
-    width: 200px;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Coloca imagem e botão em coluna */
+    align-items: center; /* Centraliza itens na coluna */
+    text-align: center;
 }
 
 .episodio img {
-    width: 100%;
+    width: 200px; /* Define uma largura fixa para uniformidade */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -416,15 +415,11 @@ strong {
     transform: scale(1.01);
 }
 
-/* Adicionando margem entre a imagem e o link de descrição */
-.episodio .descricao-link {
-    margin-top: 15px;
-}
-
 /* Estilos para o link de descrição */
 .descricao-link {
+    margin-top: 15px; /* Espaço entre imagem e botão */
     display: inline-block;
-    width: 180px;
+    width: 180px; /* Largura do botão */
     height: 50px;
     line-height: 1.2;
     font-size: 0.9rem;
@@ -447,6 +442,8 @@ strong {
     background-color: var(--cor2);
     color: #fff;
 }
+
+
 
 /* Estilos para o tocador de áudio */
 .audio-player {
@@ -471,97 +468,97 @@ audio {
 
 /* SEXTA SEÇÃO */
 
+/* Sexta Seção CSS */
 .sexta-secao {
     text-align: center;
-    padding: 40px 0;
-    width: 98vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to bottom right, #f8e8e8, #f2c5c5);
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.24), 0px 4px 8px rgba(0, 0, 0, 0.24);
+    padding: 40px; /* Expande o padding para aumentar o espaço interno */
+    background: linear-gradient(to bottom, #fce8e6, #f2c4c1); /* Mantém o gradiente de fundo */
+    width: 99vw; /* Garante que a seção ocupe toda a largura da tela */
+    margin-left: calc(50% - 50vw); /* Centraliza o fundo ao estender para os lados */
     margin-top: 60px;
 }
 
 .sexta-secao h2 {
-    font-size: 2.5rem;
-    font-family: 'Hanken Grotesk', sans-serif;
-    color: var(--cor2);
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: var(--fonte-titulos);
 }
 
-.carousel-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 250px); /* Largura das caixas */
+    gap: 40px; /* Espaço horizontal entre as caixas na linha superior */
+    justify-content: center;
 }
 
-.carousel-track {
+.bottom-row {
+    grid-column: 1 / span 3; /* Ocupa todas as três colunas */
     display: flex;
-    gap: 15px;
-    width: max-content;
-    position: relative;
-    animation: slideshow 30s linear infinite; /* Aumentei o tempo para 30s para um movimento mais suave */
-    will-change: transform;
+    justify-content: space-around; /* Espaço igual dos dois lados */
+    gap: 40px; /* Espaço entre as duas caixas na linha inferior */
+    margin-top: 40px; /* Espaço vertical entre as linhas superior e inferior */
+    margin-bottom: 80px; /* Espaço extra abaixo da linha inferior */
+}
+
+
+.item {
+    text-align: center;
+    width: 200px;
 }
 
 .card {
-    flex: 0 0 auto;
-    width: 150px;
-    height: 220px;
-    border: 1px solid var(--cor2);
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px; /* Aumente o valor conforme necessário */
+    height: 160px; /* Aumente o valor conforme necessário */
+    background-color: var(--cor1);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+}
+
+.item p {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    font-family: var(--fonte-titulos);
+    font-size: 1.2em;
+    width: 250px; /* Ajuste para alinhar com a nova largura da caixa */
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes slideshow {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Calculando exatamente a distância que precisamos mover */
-        transform: translateX(calc(-50% - 7.5px));
-    }
+/* Estilização da Linha Inferior */
+.bottom-row {
+    grid-column: 1 / span 3; /* Ocupa todas as três colunas */
+    display: flex;
+    justify-content: center; /* Centraliza as caixas na linha inferior */
+    gap: 100px; /* Reduz o espaço entre as caixas na linha inferior */
+    margin-top: 40px; /* Espaço vertical entre as linhas superior e inferior */
+    margin-bottom: 80px; /* Espaço extra abaixo da linha inferior */
 }
 
-/* Adicionando propriedades para suavizar a animação */
-.carousel-track {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+
+
+.bottom-row .item {
+    width: 200px;
 }
 
-.carousel-container:hover .carousel-track {
-    animation-play-state: paused;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .carousel-container {
-        padding: 15px 0;
-    }
-    
-    .card {
-        width: 130px;
-        height: 190px;
-    }
-}
 
 
 /* SÉTIMA SEÇÃO - HABILIDADES */
@@ -582,14 +579,14 @@ audio {
 .habilidades-container {
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 70px; /* Ajuste o espaçamento se necessário */
 }
 
 .habilidade {
     text-align: center;
     color: var(--cor2);
     font-family: 'Hanken Grotesk', sans-serif;
-    max-width: 200px; 
+    max-width: 200px;
 }
 
 .habilidade img {
@@ -597,68 +594,28 @@ audio {
     height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.361);
+    transition: transform 0.3s ease;
+}
+
+.habilidade img:hover {
+    transform: scale(1.05);
+}
+
+.habilidade a {
+    text-decoration: none; /* Remove a decoração do link */
+    color: var(--cor2);
 }
 
 .habilidade p {
     margin-top: 10px;
     font-size: 1.3rem;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.habilidade img:hover {
-    transform: scale(1.05); /* Aumenta a imagem em 5% */
-    transition: transform 0.3s ease; /* Suaviza a transição */
+.habilidade a:hover p {
+    color: var(--cor1); /* Ajuste para a cor de destaque ao passar o mouse */
 }
-
-
-/* OITAVA SEÇÃO */
-
-.oitava-secao {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--cor7);
-    margin: 0 auto;
-    margin-top: 80px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
-}
-
-.oitava-secao h2 {
-    font-size: 2.5rem;
-    font-family: 'Hanken Grotesk', sans-serif;
-    color: var(--cor2);
-    margin-bottom: 20px;
-}
-
-/* Estilos para a lista de sugestões */
-.sugestoes-container {
-    display: flex;
-    justify-content: center;
-}
-
-.sugestoes {
-    list-style: none;
-    padding: 0;
-    column-count: 3; /* Divide a lista em duas colunas */
-    column-gap: 60px; /* Espaço entre as colunas */
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.sugestoes li {
-    font-size: 1rem;
-    font-family: 'Hanken Grotesk', sans-serif;
-    padding: 8px 0;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.sugestoes li:hover {
-    color: var(--cor1); /* Cor vermelha ao passar o mouse */
-}
-
-
 
 /* FOOTER */
 
@@ -699,5 +656,22 @@ footer {
 }
 
 .footer-menu a:hover {
+    color: #555; 
+}
+
+.footer-credit {
+    font-size: 1rem;
+    color: var(--cor2);
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin-top: 10px;
+}
+
+.footer-credit a {
+    color: var(--cor2);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-credit a:hover {
     color: #555; 
 }
