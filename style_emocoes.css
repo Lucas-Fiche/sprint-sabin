@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor_branca: white;
+    --cor_alegria: #feeb3a;
+    --cor_tristeza: #4e74af;
+    --cor_raiva: #c9171d;
+    --cor_ansiedade: #ff914d;
+    --cor_vergonha: #ff66c4;
+    --cor_medo: #8c52ff;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-titulos: 'Hanken Grotesk', sans-serif;
+}
+
+html, body {
+    font-family: var(--fonte-padrao);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Estilos gerais para o layout */
+.container {
+    display: flex;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.419);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 120px; /* Cria espaço para a imagem fora do container */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.content {
+    flex: 3;
+    padding-right: 20px;
+}
+
+h1 {
+    font-family: var(--fonte-titulos);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.source {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Distância e tamanhos específicos para cada emoção */
+body.alegria .image { left: -400px; }
+body.tristeza .image { left: -400px; }
+body.raiva .image { left: -500px; }
+body.ansiedade .image { left: -500px; }
+body.vergonha .image { left: -500px; }
+body.medo .image { left: -500px; }
+
+body.alegria .image img { max-width: 300px; }
+body.tristeza .image img { max-width: 500px; }
+body.raiva .image img { max-width: 600px; }
+body.ansiedade .image img { max-width: 600px; }
+body.vergonha .image img { max-width: 600px; }
+body.medo .image img { max-width: 600px; }
+
+/* Botão Voltar */
+
+.back-button {
+    position: fixed; /* Torna o botão fixo na tela */
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: var(--fonte-padrao);
+    font-size: 0.9em;
+    border: 2px solid;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    z-index: 1000; /* Garante que o botão esteja acima do conteúdo */
+}
+
+/* Bordas específicas para cada emoção */
+body.alegria .back-button { border-color: #ceba00; }
+body.tristeza .back-button { border-color: #0045ac; }
+body.raiva .back-button { border-color: #900005; }
+body.ansiedade .back-button { border-color: #ff6200; }
+body.vergonha .back-button { border-color: #ff009d; }
+body.medo .back-button { border-color: #4e3284; }
+
+/* Efeito de Hover para cada emoção */
+body.alegria .back-button:hover { background-color: #ceb90086; color: var(--cor_branca); border-color: #ceba00; }
+body.tristeza .back-button:hover { background-color: #0045ac88; color: var(--cor_branca); border-color: #0045ac; }
+body.raiva .back-button:hover { background-color: #9000057d; color: var(--cor_branca); border-color: #900005; }
+body.ansiedade .back-button:hover { background-color: #ff620084; color: var(--cor_branca); border-color: #b8622c; }
+body.vergonha .back-button:hover { background-color: #ff009d61; color: var(--cor_branca); border-color: #ff009d; }
+body.medo .back-button:hover { background-color: #4d32846d; color: var(--cor_branca); border-color: #4e3284; }
+
+/* Estilos específicos para cada emoção com fundo degradê */
+
+/* Alegria - Degradê do branco para o amarelo */
+body.alegria {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_alegria));
+    background-color: var(--cor_alegria); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Tristeza - Degradê do branco para o azul escuro */
+body.tristeza {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_tristeza));
+    background-color: var(--cor_tristeza); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #2a3d66;
+}
+
+/* Raiva - Degradê do branco para o vermelho escuro */
+body.raiva {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_raiva));
+    background-color: var(--cor_raiva); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #600000;
+}
+
+/* Ansiedade - Degradê do branco para o laranja escuro */
+body.ansiedade {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_ansiedade));
+    background-color: var(--cor_ansiedade); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #4b0082;
+}
+
+/* Vergonha - Degradê do branco para o rosa escuro */
+body.vergonha {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_vergonha));
+    background-color: var(--cor_vergonha); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #b03060;
+}
+
+/* Medo - Degradê do branco para o roxo escuro */
+body.medo {
+    background: linear-gradient(to bottom right, var(--cor_branca), var(--cor_medo));
+    background-color: var(--cor_medo); /* Cor contínua após o fim do degradê */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #483d8b;
+}
