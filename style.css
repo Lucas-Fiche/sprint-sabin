@@ -617,6 +617,59 @@ audio {
     color: var(--cor1); /* Ajuste para a cor de destaque ao passar o mouse */
 }
 
+/* OITAVA SEÇÃO */
+
+.oitava-secao {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+.oitava-secao h2 {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cor2);
+    margin-bottom: 40px;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa{
+    font-size: 2.5em
+}
+
+.estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+}
+
+.imagem-qrcode {
+    margin-top: 60px;
+    width: 200px; /* Ajuste o valor para o tamanho desejado */
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem-qrcode:hover {
+    transform: scale(1.05);
+}
+
+.imagem-qrcode img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 /* FOOTER */
 
 footer {
